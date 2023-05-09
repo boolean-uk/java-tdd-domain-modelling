@@ -17,13 +17,17 @@ public class Basket {
     public double total(){
         double total = 0.0;
         for (Map.Entry<String, Double> entry : items.entrySet()) {
-            total += entry.getValue();
+            double price = entry.getValue();
+
+            if (price < 0)
+                price = 0;
+
+            total += price;
         }
-        if(total <0.0){
+        if(total < 0.0){
             return 0.0;
         }else{
             return total;
         }
-
     }
 }
