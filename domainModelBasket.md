@@ -1,11 +1,12 @@
-| Classes   | Methods                                               | Scenario                                           | Outputs           |
-|-----------|-------------------------------------------------------|----------------------------------------------------|-------------------|
-| `Shopper` | `addProduct(List<Product> basket,Product product)`    | add Product to the list                            | void              |
-|           | `removeProduct(List<Product> basket,Product product)` | if Product exist remove                            | Product           |
-|           | `findProduct(List<Product> basket,Product product)`   | if basket containts =>                             | true              |
-|           |                                                       | if basket doesnt containts                         | false             |
-|           | `total(List<Product> basket)`                         | iterate over list and get sum of price of products | int               |
-|           | `checkout(List<Product> basket)`                      | remove all items in List and pay?                  | new List<Product> |
+| Classes  | Methods                                       | Scenario                                                     | Outputs |
+|----------|-----------------------------------------------|--------------------------------------------------------------|---------|
+| Shopper	 | `addToBasket(Product product, int quantity)	` | Adds a Product with the specified quantity to the basket	    |         |
+|          | `getBasketTotalCost()`                        | Calculates and returns the total cost of items in the basket | double  |
+| Product  |                                               | Represents a product in the supermarket                      |         |
+|          | `getPrice()`                                  | Retrieves the price of the product                           | double  |
+|          | `getName()`                                   | Retrieves the name of the product                            | String  |
+| Basket   | `addProduct(Product product, int quantity)`   | Adds a Product with the specified quantity to the basket     |         |
+|          | `calculateTotalCost()`                        | Calculates and returns the total cost of items in the basket | double  |
 
 ````
 As a supermarket shopper,
