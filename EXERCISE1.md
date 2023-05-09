@@ -43,10 +43,11 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
-| Classes      | Methods                                 | Scenario            | Outputs     |
-|--------------|-----------------------------------------|---------------------|-------------|
-| ` Products ` | add(List<String> cohorts, String name)  | add it to the array |             |
-| ` Basket`    | Calculate total(List<String> Products ) | Sum of the price    | Total price |
+| Classes      | Methods                                 | Scenario                 | Outputs     |
+|--------------|-----------------------------------------|--------------------------|-------------|
+| ` Products ` | add(List<String> products, String name) | if its *not in* the list | true        |
+|              |                                         | if its *in* the list     | false       |
+| ` Basket`    | Calculate total(List<String> Products ) | Sum of the price         | Total price |
 
 ```
 As an organised individual,
