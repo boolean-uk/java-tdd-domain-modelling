@@ -28,4 +28,12 @@ public class BasketTest {
         basket.add("Bread", 2);
         Assertions.assertTrue(basket.items.containsKey("Bread"));
     }
+
+    @Test
+    public void testTotalCostOfItemsBasket() {
+        Basket basket = new Basket();
+        basket.items.put("Milk", 2);
+        basket.items.put("Bread", 2);
+        Assertions.assertEquals(4, basket.total());
+    }
 }
