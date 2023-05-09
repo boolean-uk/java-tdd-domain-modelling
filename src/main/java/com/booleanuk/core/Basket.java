@@ -8,7 +8,7 @@ import java.util.Map;
 public class Basket {
     HashMap <String, Double> items = new HashMap<String, Double>();
     public boolean add(String product, double price){
-        if(items.get(product) == null){
+        if(!items.containsKey(product)){
             items.put(product,price);
             return true;
         }
@@ -19,6 +19,11 @@ public class Basket {
         for (Map.Entry<String, Double> entry : items.entrySet()) {
             total += entry.getValue();
         }
-        return total;
+        if(total <0.0){
+            return 0.0;
+        }else{
+            return total;
+        }
+
     }
 }
