@@ -24,8 +24,19 @@ Here is how one might design a domain model for the above user story:
 > **Time to analyse**
 >
 > Evaluate the user story and the domain model above. What assumptions did the developer have to make and what would you do differently?
+> - The developer will use the Cohort Manager class for his search method
+> - The developer will take a list of strings (cohorts) and an individual string with a name of the cohort he is looking for
+> - The search method will return a boolean
 > 
 > Create your own domain model for the user story above, try to come up with a different solution than the model provided. You can use a table like the one above, a spreadsheet, pen and paper, whatever you'd like. Share your work in your cohorts classroom channel when you're done.
+
+Updated table:
+
+| Classes         | Methods                                            | Scenario               | Outputs                                                            |
+|-----------------|----------------------------------------------------|------------------------|--------------------------------------------------------------------|
+| `CohortManager` | `search(List<CohortObjects> cohorts, String name)` | If name is in list     | Return the object with all the details of the corresponding cohort |
+|                 |                                                    | If name is not in list | Print message: The cohort does not exist. Return null              |
+
 
 ### Exercise
 
