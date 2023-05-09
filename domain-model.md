@@ -19,4 +19,4 @@
 |           |                 |               | If basket is null  | Return null                   |
 |           |                 | `toString()`  | If basket exists   | Return message*               |
 |           |                 |               | If basket is null  | Return "empty basket" message |
-*With Product name, price and quantity, and Basket totalPrice()
+*With Basket items name, price and quantity, and Basket totalPrice()
