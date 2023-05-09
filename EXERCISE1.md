@@ -18,8 +18,9 @@ Here is how one might design a domain model for the above user story:
 
 | Classes         | Methods                                     | Scenario               | Outputs |
 |-----------------|---------------------------------------------|------------------------|---------|
-| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | true    |
-|                 |                                             | If name is not in list | false   |
+| `CohortManager` | `search(List<Cohort> cohorts, String name)` | If name is in list     | Return the object|
+|                 |                                             | If name is not in list | null   |
+|     `Cohort`    |        `Cohort(String name)`                |                        |        |
 
 > **Time to analyse**
 >
