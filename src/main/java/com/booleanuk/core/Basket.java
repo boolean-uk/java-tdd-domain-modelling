@@ -13,4 +13,8 @@ public class Basket {
             return true;
         }
     }
+
+    public int total() {
+        return product.entrySet().stream().reduce(0, (x, y) -> x + y.getValue(), Integer::sum);
+    }
 }
