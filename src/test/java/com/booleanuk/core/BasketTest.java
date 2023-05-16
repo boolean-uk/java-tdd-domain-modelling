@@ -28,7 +28,8 @@ public class BasketTest {
         // when not empty
         basket.addItems("Product A", 10);
         basket.addItems("Product B", 20);
-
+        expected=30;
+        actual = basket.total();
         Assertions.assertEquals(expected,actual);
     }
 
