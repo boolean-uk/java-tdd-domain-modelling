@@ -5,6 +5,6 @@ import java.util.HashMap;
 public class Basket {
     HashMap<String, Integer> items = new HashMap<>();
     public boolean search(String name){
-        return true;
+       return items.containsKey(name);
     }
 }
