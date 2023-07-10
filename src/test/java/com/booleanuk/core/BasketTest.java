@@ -31,11 +31,13 @@ public class BasketTest {
     }
 
     @Test
-    public void checkTotalPrice() {
+    public void checkTotalPriceEquals7() {
         Map<String, Integer> itemMap2 = new HashMap<>();
         itemMap2.put("Coffee", 4);
         itemMap2.put("Tea", 3);
         Assertions.assertEquals(7, basket.total());
     }
+
+
 
 }
