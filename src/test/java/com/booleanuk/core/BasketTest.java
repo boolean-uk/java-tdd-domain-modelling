@@ -23,7 +23,7 @@ public class BasketTest
     }
 
     @Test
-    public void ItemWithTheProvidedNameIsAlreadyInTheBasketShouldReturnTrue() {
+    public void itemWithTheProvidedNameIsAlreadyInTheBasketShouldReturnTrue() {
         // when
         Basket basket = new Basket();
         basket.items.put("tomato", 2);
