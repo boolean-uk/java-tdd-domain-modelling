@@ -14,5 +14,13 @@ public class Basket {
         return true;
     }
 
+    public int total(){
+      int totalCost = 0;
+        for (Integer x : items.values()) {
+            totalCost+=x;
+        }
+        return totalCost;
+    }
+
 
 }
