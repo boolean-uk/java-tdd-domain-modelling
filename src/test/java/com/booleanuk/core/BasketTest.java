@@ -20,5 +20,10 @@ public class BasketTest {
         Basket basket = new Basket();
         int totalCost =basket.total();
         Assertions.assertEquals(0, totalCost);
+
+        basket.add("Apple", 10);
+        basket.add("Pear", 20);
+        totalCost = basket.total();
+        Assertions.assertEquals(30, totalCost);
     }
 }
