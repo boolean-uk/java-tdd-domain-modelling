@@ -10,9 +10,19 @@ public class Basket {
     }
 
     public boolean add(String product, int price) {
-        if(this.items.containsKey(product))
+        if (this.items.containsKey(product))
             return false;
         this.items.put(product, price);
         return true;
+    }
+
+    public int total() {
+        int sum = 0;
+
+        for (int price : items.values()) {
+            sum += price;
+        }
+
+        return sum;
     }
 }
