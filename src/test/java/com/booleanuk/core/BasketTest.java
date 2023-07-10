@@ -23,7 +23,7 @@ public class BasketTest {
     }
 
     @Test
-    public void testTotalMethod_shouldReturnInt(){
+    public void testTotalMethod_shouldReturn2ForProduct1(){
         Basket basket = new Basket();
         String name1 = "Product1";
         int price1 = 2;

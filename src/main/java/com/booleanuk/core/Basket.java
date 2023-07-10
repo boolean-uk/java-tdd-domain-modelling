@@ -15,6 +15,10 @@ HashMap<String, Integer> items = new HashMap<>();
     }
 
     public int total(){
-        return 2;
+        int sum = 0;
+        for(int price: items.values()){
+            sum +=price;
+        }
+        return sum;
     }
 }
