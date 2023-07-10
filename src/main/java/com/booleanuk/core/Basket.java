@@ -5,23 +5,22 @@ import java.util.Map;
 
 public class Basket {
 
-    Map<String, Integer> basket = new HashMap<>();
+    Map<String, Integer> basket;
 
     public Basket() {
-        basket.put("Coffee" ,4);
-        basket.put("Tea", 3);
+        this.basket = new HashMap<>();
     }
 
-    public boolean add(String name, int price) {
-        return basket.containsKey(name);
+    boolean add(String product, int price) {
+        if (basket.containsKey(product)) {
+            return false;
+        }
+        basket.put(product, price);
+        return true;
     }
 
     public int total() {
-        int totalPrice = 0;
-        for(int price : basket.values()) {
-            totalPrice += price;
-        }
-        return totalPrice;
+        return this.basket.values().stream().mapToInt(Integer::intValue).sum();
     }
 
 
