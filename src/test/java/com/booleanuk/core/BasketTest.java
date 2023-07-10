@@ -12,4 +12,12 @@ public class BasketTest {
         int price1 = 2;
         Assertions.assertTrue(basket.add(name1, price1));
     }
+
+    @Test
+    public void testAddMethod_itemIsInTheList_shouldReturnFalse(){
+        Basket basket = new Basket();
+        String name1 = "Product1";
+        int price1 = 2;
+        Assertions.assertFalse(basket.add(name1, price1));
+    }
 }
