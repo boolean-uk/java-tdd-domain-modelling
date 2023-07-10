@@ -25,11 +25,17 @@ I'd like to see an itemised receipt that includes the name and price of the prod
 I bought as well as the quantity, and a total cost of my basket.
 ```
 
-| Classes    | Members                  | Methods        | Scenario                                                                 | Outputs                                                                                              |
-|------------|--------------------------|----------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| `Customer` | `List<Receipt> receipts` | `getReceipt()` | Calculate total value of cart depending on `products` price and quantity | New instance of class `Receipt` with fields: `Map<Product, Double> products`,`BigDecimal totalValue` |
-|            |                          |                |                                                                          |                                                                                                      |
+| Classes    | Members                  | Methods               | Scenario                                                                 | Outputs          |
+|------------|--------------------------|-----------------------|--------------------------------------------------------------------------|------------------|
+| `Customer` | `List<Receipt> receipts` | `getReceipt(Long id)` | Calculate total value of cart depending on `products` price and quantity | `ReceiptSummary` |
+|            |                          |                       |                                                                          |                  |
 
 | Classes   | Members                         |
 |-----------|---------------------------------|
-| `Receipt` | `Map<Product, Double> products` |
+| `Receipt` | `Long id`                       |
+|           | `Map<Product, Double> products` |
+
+| Classes          | Members                 |
+|------------------|-------------------------|
+| `ReceiptSummary` | `Receipt receipt`       |
+|                  | `BigDecimal totalValue` |
