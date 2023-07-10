@@ -36,6 +36,9 @@ As a supermarket shopper,
 So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
+| Classes              | Methods                                  | Scenario                       | Outputs |
+|----------------------|------------------------------------------|--------------------------------|---------|
+| `SupermarketShopper` | `search(Map<Product,Integer> products) ` | Returns sum of products values | value   |
 
 ```
 As an organised individual,
