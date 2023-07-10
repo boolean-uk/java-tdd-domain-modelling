@@ -14,4 +14,15 @@ class CohortManagerTest {
         assertEquals(true, isInBasket);
     }
 
+    @Test
+    public void shouldAddProductWhenExists(){
+        Basket basket = new Basket();
+        basket.add("aaa", 22);
+        boolean isInBasket = basket.add("aaa", 22);
+
+
+        assertEquals(false, isInBasket);
+    }
+
+
 }

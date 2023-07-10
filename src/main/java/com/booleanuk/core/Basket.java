@@ -6,10 +6,17 @@ public class Basket {
     private HashMap<String, Integer> items;
 
     public Basket() {
+        this.items = new HashMap<>();
     }
 
     public boolean add(String product, int price){
-        return false;
+        boolean wasInBasket = this.items.containsKey(product);
+        if (wasInBasket){
+            return false;
+        }else{
+            this.items.put(product, price);
+            return true;
+        }
     }
 
     public int total(){return -1;}
