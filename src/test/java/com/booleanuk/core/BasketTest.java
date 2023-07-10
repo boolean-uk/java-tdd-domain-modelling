@@ -9,7 +9,7 @@ public class BasketTest {
         Basket basket = new Basket();
         String product = "Juice";
         int price = 5;
-        Assertions.assertEquals(true, basket.add(product, price));
+        Assertions.assertTrue(basket.add(product, price));
     }
 
     @Test
@@ -18,7 +18,7 @@ public class BasketTest {
         String product = "Juice";
         int price = 5;
         basket.add(product, price);
-        Assertions.assertEquals(false, basket.add(product, price));
+        Assertions.assertFalse(basket.add(product, price));
     }
 
     @Test
@@ -27,6 +27,18 @@ public class BasketTest {
         String product = "Juice";
         int price = 5;
         basket.add(product, price);
-        Assertions.assertTrue(basket.total() > 0);
+        Assertions.assertEquals(5, basket.total());
+    }
+
+    @Test
+    public void totalTestMultipleProducts() {
+        Basket basket = new Basket();
+        String productJuice = "Juice";
+        int priceJuice = 5;
+        String productBread = "Bread";
+        int priceBread = 2;
+        basket.add(productJuice, priceJuice);
+        basket.add(productBread, priceBread);
+        Assertions.assertEquals(7, basket.total());
     }
 }
