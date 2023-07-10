@@ -23,4 +23,13 @@ public class BasketTest {
         Assertions.assertTrue(basket.add("Coffee",4));
     }
 
+    @Test
+    public void providedNameShouldReturnFalse() {
+        Map<String, Integer> itemMap = new HashMap<>();
+        itemMap.put("FalseCoffee", 4);
+        itemMap.put("Tea", 3);
+        basket.add("Coffee", 4);
+        Assertions.assertFalse(basket.add("Coffee",4));
+    }
+
 }
