@@ -7,8 +7,12 @@ public class Basket {
 
     public boolean add(String product, int price)
     {
-
-        return !items.containsKey(product);
+        boolean isInBasket = items.containsKey(product);
+        if(!isInBasket)
+        {
+            items.put(product,price);
+        }
+        return  !isInBasket;
     }
     public int total()
     {
