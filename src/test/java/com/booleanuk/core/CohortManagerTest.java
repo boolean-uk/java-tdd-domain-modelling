@@ -24,5 +24,16 @@ class CohortManagerTest {
         assertEquals(false, isInBasket);
     }
 
+    @Test
+    public void countTotal(){
+        Basket basket = new Basket();
+
+        basket.add("aaa", 22);
+        basket.add("aba", 24);
+        int total = basket.total();
+
+        assertEquals(46, total );
+
+    }
 
 }
