@@ -28,12 +28,8 @@ public class BasketTest {
 
     @Test
     public void checkTotalPriceEquals7() {
-
         basket.add("Coffee", 4);
         basket.add("Tea", 3);
-
-
-
         Assertions.assertEquals(7, basket.total());
     }
 
