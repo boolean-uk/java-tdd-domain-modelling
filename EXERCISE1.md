@@ -37,6 +37,10 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+| Classes         | Methods                                       | Scenario    | Outputs |
+|-----------------|-----------------------------------------------|-------------|---------|
+| `MarketManager` | `totalCost(HashMap<String, Integer> items)`   | Always true | Integer |
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
