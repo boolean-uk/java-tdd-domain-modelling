@@ -12,4 +12,12 @@ public class Basket {
         }
         return false;
     }
+
+    public int total() {
+        int price =0;
+        for(int p : products.values()){
+            price+=p;
+        }
+        return price;
+    }
 }
