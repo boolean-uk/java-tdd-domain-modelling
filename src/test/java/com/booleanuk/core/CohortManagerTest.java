@@ -5,10 +5,21 @@ import org.junit.jupiter.api.Test;
 
 class CohortManagerTest {
     @Test
-    public void testAdd(){
+    public void testContains(){
         CohortManager cH = new CohortManager();
         cH.add("milk", 6);
         Assertions.assertTrue(cH.contains("milk"));
+    }
+    @Test
+    public void testAddTrue(){
+        CohortManager cH = new CohortManager();
+        Assertions.assertTrue(cH.add("milk", 6));
+    }
+    @Test
+    public void testAddFalse(){
+        CohortManager cH = new CohortManager();
+        cH.add("milk", 6);
+        Assertions.assertFalse(cH.add("milk", 6));
     }
 
     @Test

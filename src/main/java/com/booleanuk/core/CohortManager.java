@@ -6,8 +6,11 @@ public class CohortManager {
 
     private final HashMap<String, Integer> productsPrice = new HashMap<String, Integer>();
     private int totalPrice;
-    public void add(String product, int price){
+    public boolean add(String product, int price){
+        if(productsPrice.containsKey(product))
+            return false;
         productsPrice.put(product, price);
+        return true;
     }
 
     public int total(){
