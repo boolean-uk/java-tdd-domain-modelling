@@ -30,4 +30,12 @@ public class BasketTest {
         Assertions.assertFalse(basket.add("FalseCoffee",4));
     }
 
+    @Test
+    public void checkTotalPrice() {
+        Map<String, Integer> itemMap2 = new HashMap<>();
+        itemMap2.put("Coffee", 4);
+        itemMap2.put("Tea", 3);
+        Assertions.assertEquals(7, basket.total());
+    }
+
 }
