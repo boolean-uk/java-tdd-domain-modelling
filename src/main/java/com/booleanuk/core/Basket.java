@@ -7,8 +7,12 @@ public class Basket {
 
     Map<String, Integer> basket = new HashMap<>();
 
+    public Basket() {
+        basket.put("Coffee" ,4);
+    }
+
     public boolean add(String name, int price) {
-        return true;
+        return basket.containsKey(name);
     }
 
 }

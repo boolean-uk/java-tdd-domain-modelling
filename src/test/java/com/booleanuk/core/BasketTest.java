@@ -19,17 +19,15 @@ public class BasketTest {
         Map<String, Integer> itemMap = new HashMap<>();
         itemMap.put("Coffee", 4);
         itemMap.put("Tea", 3);
-        basket.add("Coffee", 4);
         Assertions.assertTrue(basket.add("Coffee",4));
     }
 
     @Test
     public void providedNameShouldReturnFalse() {
-        Map<String, Integer> itemMap = new HashMap<>();
-        itemMap.put("FalseCoffee", 4);
-        itemMap.put("Tea", 3);
-        basket.add("Coffee", 4);
-        Assertions.assertFalse(basket.add("Coffee",4));
+        Map<String, Integer> itemMap2 = new HashMap<>();
+        itemMap2.put("Coffee", 4);
+        itemMap2.put("Tea", 3);
+        Assertions.assertFalse(basket.add("FalseCoffee",4));
     }
 
 }
