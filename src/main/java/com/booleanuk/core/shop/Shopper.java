@@ -3,11 +3,11 @@ package com.booleanuk.core.shop;
 import java.math.BigDecimal;
 
 public class Shopper {
-    private BigDecimal cash;
+    private BigDecimal balance;
     private final Basket basket = new Basket();
 
-    public Shopper(BigDecimal cash) {
-        this.cash = cash;
+    public Shopper(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public void addToBasket(Product product) {
@@ -28,13 +28,17 @@ public class Shopper {
      */
     public void pay() {
         var basketPrice = basket.totalCost();
-        if (basketPrice.compareTo(cash) > 0) {
+        if (basketPrice.compareTo(balance) > 0) {
             throw new IllegalStateException("Insufficient funds to pay for basket");
         }
-        cash = cash.subtract(basketPrice);
+        balance = balance.subtract(basketPrice);
         basket.clear();
 
-        System.out.println("Shopper balance after purchase: " + cash);
+        System.out.println("Shopper balance after purchase: " + balance);
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
     }
 
     public String getReceipt(){

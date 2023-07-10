@@ -43,4 +43,8 @@ public class Basket {
     public void clear() {
         products.clear();
     }
+
+    public Set<Product> getProducts() {
+        return products;
+    }
 }
