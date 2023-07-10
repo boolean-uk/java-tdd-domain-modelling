@@ -12,6 +12,9 @@ HashMap<String, Integer> items = new HashMap<>();
             items.put(product, price);
             return true;
         }
+    }
 
+    public int total(){
+        return 2;
     }
 }

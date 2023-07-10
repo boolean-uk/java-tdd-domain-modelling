@@ -22,7 +22,8 @@ public class BasketTest {
         Assertions.assertFalse(basket.add(name1, price1));
     }
 
-    @Test void testTotalMethod_shouldReturnInt(){
+    @Test
+    public void testTotalMethod_shouldReturnInt(){
         Basket basket = new Basket();
         String name1 = "Product1";
         int price1 = 2;
