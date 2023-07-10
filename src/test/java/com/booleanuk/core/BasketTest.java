@@ -35,4 +35,16 @@ public class BasketTest
         assertTrue(isInTheBasket);
     }
 
+    @Test
+    public void shouldReturnTotalCostOfBasket(){
+        //when
+            Basket basket = new Basket();
+            basket.items.put("tomato", 2);
+            basket.items.put("potato", 1);
+        //given
+            int total = basket.total();
+        //then
+        assertEquals(3,total);
+    }
+
 }
