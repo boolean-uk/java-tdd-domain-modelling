@@ -4,17 +4,21 @@ import java.util.HashMap;
 
 public class CohortManager {
 
-    private HashMap<String, Integer> list = new HashMap<>();
+    private HashMap<String, Integer> productsPrice = new HashMap<>();
     private int totalPrice;
-    public void add(String product, int price){
-        list.put(product, price);
+
+    public boolean add(String product, int price){
+        if(productsPrice.containsKey(product))
+            return false;
+        productsPrice.put(product, price);
+            return true;
     }
 
     public int total(){
-        return list.values().stream().mapToInt(d-> d).sum();
+        return productsPrice.values().stream().mapToInt(d-> d).sum();
     }
 
     public boolean contains(String product){
-        return list.containsKey(product);
+        return productsPrice.containsKey(product);
     }
 }
