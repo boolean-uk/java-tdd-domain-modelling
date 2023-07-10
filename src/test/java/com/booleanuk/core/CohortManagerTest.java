@@ -5,4 +5,10 @@ import org.junit.jupiter.api.Test;
 
 class CohortManagerTest {
 
+    @Test
+    public void addToBasketReturnstrue()
+    {
+
+    }
+
 }
