@@ -18,6 +18,7 @@ public class BasketTest {
         Basket basket = new Basket();
         String name1 = "Product1";
         int price1 = 2;
+        basket.add(name1, price1);
         Assertions.assertFalse(basket.add(name1, price1));
     }
 }
