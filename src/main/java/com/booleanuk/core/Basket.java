@@ -16,7 +16,7 @@ public class Basket {
         }
     }
 
-    public int calculateTotalCost() {
+    public int total() {
         return items.values().stream().mapToInt(Integer::intValue).sum();
     }
 }

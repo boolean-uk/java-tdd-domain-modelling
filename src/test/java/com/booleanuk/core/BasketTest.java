@@ -20,11 +20,11 @@ public class BasketTest {
     }
 
     @Test
-    public void shouldCalculateTotalCost() {
+    public void shouldCalculateTotal() {
         Basket basket = new Basket();
         basket.add("apple", 3);
         basket.add("orange", 2);
-        int result = basket.calculateTotalCost();
+        int result = basket.total();
         Assertions.assertEquals(5, result);
     }
 }
