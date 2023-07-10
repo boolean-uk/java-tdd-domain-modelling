@@ -12,6 +12,10 @@ public class Basket {
         items.put(product, price);
     }
 
+    public int total(){
+        return items.values().stream().mapToInt(Integer::intValue).sum();
+    }
+
     public boolean search(String name){
        return items.containsKey(name);
     }

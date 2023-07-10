@@ -30,4 +30,16 @@ public class BasketTest {
 
         Assertions.assertTrue(result);
     }
+    @Test
+    public void testSearchReturnsFive(){
+        Basket basket = new Basket();
+
+        basket.add("banana", 2);
+        basket.add("apple", 1);
+        basket.add("milk", 4);
+        String name = "milk";
+        int result = basket.total();
+
+        Assertions.assertEquals(5, result);
+    }
 }
