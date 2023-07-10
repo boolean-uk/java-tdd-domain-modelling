@@ -11,7 +11,8 @@ public class BasketTest {
         Basket basket = new Basket();
         boolean result1 = basket.add("Apple", 10);
         Assertions.assertTrue(result1);
-
+        boolean result2= basket.add("Apple", 10);
+        Assertions.assertFalse(result2);
     }
 
     @Test
