@@ -67,6 +67,7 @@ I bought as well as the quantity, and a total cost of my basket.
 |         |                          | Double cost                                                             |                                |                                                                                               |
 | Receipt | toString()               | Map<,> products, Double totalCost, Integer totalQuantity, Person person |                                | Shows the content of the receipt, total quantity and cost of products, and the name ofa buyer |
 | Person  | evaluateShoppingHabits() | List<Receipt> receipts                                                  | User wants to see his receipts | Shows the full list of receipts in a nice, readable way                                       |
+|         |                          | String name                                                             |                                |                                                                                               |
 
 
 Michał Klukowski, Rafał Halama
