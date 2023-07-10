@@ -3,8 +3,17 @@ package com.booleanuk.core;
 import java.util.HashMap;
 
 public class Basket {
-    HashMap<String, Integer> items = new HashMap<>();
+    private static HashMap<String, Integer> items;
+
+    public Basket() {
+        items = new HashMap<>();
+    }
+    public void add(String product, int price) {
+        items.put(product, price);
+    }
+
     public boolean search(String name){
        return items.containsKey(name);
     }
+
 }
