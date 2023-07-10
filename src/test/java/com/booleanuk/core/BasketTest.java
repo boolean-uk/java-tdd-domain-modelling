@@ -10,4 +10,11 @@ public class BasketTest {
         boolean result = basket.add("apple", 3);
         Assertions.assertFalse(result);
     }
+
+    @Test
+    public void shouldReturnTrue() {
+        Basket basket = new Basket();
+        boolean result = basket.add("orange", 2);
+        Assertions.assertTrue(result);
+    }
 }
