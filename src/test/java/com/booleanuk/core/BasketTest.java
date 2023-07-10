@@ -18,4 +18,13 @@ public class BasketTest {
         boolean result = basket.add("orange", 2);
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void shouldCalculateTotalCost() {
+        Basket basket = new Basket();
+        basket.add("apple", 3);
+        basket.add("orange", 2);
+        int result = basket.calculateTotalCost();
+        Assertions.assertEquals(5, result);
+    }
 }
