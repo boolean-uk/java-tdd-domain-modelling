@@ -7,7 +7,8 @@ public class BasketTest {
     @Test
     public void shouldReturnFalse() {
         Basket basket = new Basket();
-        boolean result = basket.add("apple", 3);
+        basket.add("apple", 3);
+        boolean result = basket.add("apple", 5);
         Assertions.assertFalse(result);
     }
 
