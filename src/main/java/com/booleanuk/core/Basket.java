@@ -1,9 +1,10 @@
 package com.booleanuk.core;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Basket {
-    private final HashMap<String, Integer> items;
+    private final Map<String, Integer> items;
 
     public Basket() {
         this.items = new HashMap<>();
@@ -15,6 +16,10 @@ public class Basket {
         }
         items.put(product, price);
         return true;
+    }
+
+    Map<String, Integer> getItems() {
+        return items;
     }
 
     int total() {
