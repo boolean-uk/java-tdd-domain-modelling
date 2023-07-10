@@ -19,5 +19,7 @@ public class Basket {
         }
     }
 
-    public int total(){return -1;}
+    public int total(){
+        return this.items.values().stream().mapToInt(Integer::intValue).sum();
+    }
 }
