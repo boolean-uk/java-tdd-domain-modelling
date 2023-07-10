@@ -30,4 +30,10 @@ public class BasketTest {
         basket.add(name1, price1);
         Assertions.assertEquals(basket.total(), 2);
     }
+
+    @Test
+    public void testTotalMethod_shouldReturnZero(){
+        Basket basket = new Basket();
+        Assertions.assertEquals(basket.total(), 0);
+    }
 }
