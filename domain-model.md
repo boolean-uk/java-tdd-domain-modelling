@@ -4,7 +4,7 @@
 So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket."
 
-As a supermarket shopper, so that I can pay for products at checkout, I'd like to ba able to know the total cost of items in my basket.
+
 
 | Classes/Components | Methods             | Scenario                                                                                 | Output |
 |--------------------|---------------------|------------------------------------------------------------------------------------------|--------|
