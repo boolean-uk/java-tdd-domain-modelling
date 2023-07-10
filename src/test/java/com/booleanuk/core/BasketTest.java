@@ -19,8 +19,8 @@ public class BasketTest {
         Map<String, Integer> itemMap = new HashMap<>();
         itemMap.put("Coffee", 4);
         itemMap.put("Tea", 3);
-        itemMap.add("Coffe", 4);
-        Assertions.assertTrue(true);
+        basket.add("Coffee", 4);
+        Assertions.assertTrue(basket.add("Coffee",4));
     }
 
 }
