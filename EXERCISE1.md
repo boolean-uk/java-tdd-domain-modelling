@@ -47,11 +47,11 @@ I bought as well as the quantity, and a total cost of my basket.
 - Add your domain models to this repository as a file named `domain-model`. This should either be a `.md` file like this one, or a screenshot / picture of your work.
 - Your model doesn't have to look like the example provided in this file. If you feel like you need more or less columns, feel free to go with that. There is no "right way" to do this kind of thing, we're just designing a system to make our lives easier when it comes to the coding part.
 
-| Classes    | Methods          | Fields                              | Scenario               | Outputs                         |
-|------------|------------------|-------------------------------------|------------------------|---------------------------------|
-| `Basket`   | `calculate()`    | HashMap<Product, Integer> products  | If products not empty  | Return BigDecimal total cost    |
-|            |                  |                                     | If products empty      | Return BigDecimal 0.0           |
-|            | `getReceipt()`   |                                     | If products not empty  | Return List<String> receipt     |
-|            |                  |                                     | If products empty      | throw new NoProductsException() |
-| `Product`  |                  | String name                         |                        |                                 |
-|            |                  | double price                        |                        |                                 |
+| Classes    | Methods          | Fields                             | Scenario               | Outputs                         |
+|------------|------------------|------------------------------------|------------------------|---------------------------------|
+| `Basket`   | `calculate()`    | HashMap<Product, Integer> products | If products not empty  | Return BigDecimal total cost    |
+|            |                  |                                    | If products empty      | Return BigDecimal 0.0           |
+|            | `getReceipt()`   |                                    | If products not empty  | Return List<String> receipt     |
+|            |                  |                                    | If products empty      | throw new NoProductsException() |
+| `Product`  |                  | String name                        |                        |                                 |
+|            |                  | BigDecimal price                   |                        |                                 |
