@@ -1,4 +1,4 @@
-package com.booleanuk.core;
+package com.booleanuk.core.shop;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -24,12 +24,12 @@ public class Basket {
         return new Receipt(products, totalPrice);
     }
 
-    public void addProduct(Product product){
+    public boolean addProduct(Product product){
         if (products.contains(product)) {
-            System.err.printf("%s: product already in the basket\n", product.name());
-            return;
+            return true;
         }
         products.add(product);
+        return false;
     }
 
     public void removeProduct(String name) {
@@ -41,6 +41,6 @@ public class Basket {
     }
 
     public void clear() {
-        products.removeAll(products);
+        products.clear();
     }
 }

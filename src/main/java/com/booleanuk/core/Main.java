@@ -1,5 +1,8 @@
 package com.booleanuk.core;
 
+import com.booleanuk.core.shop.Basket;
+import com.booleanuk.core.shop.Product;
+
 import java.math.BigDecimal;
 
 

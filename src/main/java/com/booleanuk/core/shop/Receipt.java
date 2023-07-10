@@ -1,4 +1,4 @@
-package com.booleanuk.core;
+package com.booleanuk.core.shop;
 
 import java.math.BigDecimal;
 import java.util.Map;
