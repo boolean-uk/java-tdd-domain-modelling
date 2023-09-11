@@ -15,6 +15,9 @@ public class Basket {
 //        }
 //        this.items.put(product,price);
 //        return true;
+        if (price < 0) {
+            return false;
+        }
         return this.items.putIfAbsent(product, price) == null;
     }
 
