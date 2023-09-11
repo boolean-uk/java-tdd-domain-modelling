@@ -24,7 +24,7 @@ Here is how one might design a domain model for the above user story:
 > **Time to analyse**
 >
 > Evaluate the user story and the domain model above. What assumptions did the developer have to make and what would you do differently?
-> 
+>
 > Create your own domain model for the user story above, try to come up with a different solution than the model provided. You can use a table like the one above, a spreadsheet, pen and paper, whatever you'd like. Share your work in your cohorts classroom channel when you're done.
 
 ### Exercise
@@ -36,6 +36,16 @@ As a supermarket shopper,
 So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
+| Classes  | Member Variables        | Methods                                            | Scenario                            | Outputs |
+|----------|-------------------------|----------------------------------------------------|-------------------------------------|---------|
+|          | List<Product> Inventory | `sumBasket(HashMap<Product, Integer> basketItems)` | If list is empty                    | 0.00    |
+|          |                         | (key=product, value=amountPurchased)               | If list is not empty                | Double  |
+|          |                         |                                                    | Partial check-out (returned items?) | Double  |
+|          |                         | `addToBasket(Product product)`                     | If name is in inventory list        | true    |
+| `Basket` |                         |                                                    | If name is not in inventory list    | false   |
+|          |                         | `removeFromBasket(Product product)`                | If name is in buyer's list          | true    |
+|          |                         |                                                    | If name is not in buyer's list      | false   |
+
 
 ```
 As an organised individual,
@@ -43,6 +53,11 @@ So that I can evaluate my shopping habits,
 I'd like to see an itemised receipt that includes the name and price of the products
 I bought as well as the quantity, and a total cost of my basket.
 ```
+| Classes     | Member Variables                       | Methods       | Scenario                                                     | Outputs |
+|-------------|----------------------------------------|---------------|--------------------------------------------------------------|---------|
+| `Receipt`   | HashMap<Product, Integer> basketItems  | `viewItems()` | If list is empty                                             | String  |
+|             |                                        |               | If list is not empty                                         | String  |
+|             |                                        |               | Partial check-out (returned items? reimbursements? bonuses?) | String  |
 
 - Add your domain models to this repository as a file named `domain-model`. This should either be a `.md` file like this one, or a screenshot / picture of your work.
 - Your model doesn't have to look like the example provided in this file. If you feel like you need more or less columns, feel free to go with that. There is no "right way" to do this kind of thing, we're just designing a system to make our lives easier when it comes to the coding part.
