@@ -55,9 +55,9 @@ I bought as well as the quantity, and a total cost of my basket.
 ```
 | Classes     | Member Variables                       | Methods       | Scenario                                                     | Outputs |
 |-------------|----------------------------------------|---------------|--------------------------------------------------------------|---------|
-| `Receipt`   | HashMap<Product, Integer> basketItems  | `viewItems()` | If list is empty                                             | 0.00    |
-|             |                                        |               | If list is not empty                                         | Double  |
-|             |                                        |               | Partial check-out (returned items? reimbursements? bonuses?) | Double  |
+| `Receipt`   | HashMap<Product, Integer> basketItems  | `viewItems()` | If list is empty                                             | String  |
+|             |                                        |               | If list is not empty                                         | String  |
+|             |                                        |               | Partial check-out (returned items? reimbursements? bonuses?) | String  |
 
 - Add your domain models to this repository as a file named `domain-model`. This should either be a `.md` file like this one, or a screenshot / picture of your work.
 - Your model doesn't have to look like the example provided in this file. If you feel like you need more or less columns, feel free to go with that. There is no "right way" to do this kind of thing, we're just designing a system to make our lives easier when it comes to the coding part.
