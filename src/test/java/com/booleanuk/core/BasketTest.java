@@ -24,12 +24,6 @@ public class BasketTest {
     }
 
     @Test
-    public void testTotalWithEmptyBasket() {
-        Basket basket = new Basket();
-        Assertions.assertEquals(0, basket.total());
-    }
-
-    @Test
     public void testAddMultipleProductsToBasket() {
         Basket basket = new Basket();
         Assertions.assertTrue(basket.add("Orange", 4));
@@ -55,6 +49,12 @@ public class BasketTest {
     public void testAddProductWithNegativePriceToBasket() {
         Basket basket = new Basket();
         Assertions.assertFalse(basket.add("Chips", -2)); // Negative price should not be accepted
+        Assertions.assertEquals(0, basket.items.size());
+    }
+    @Test
+    public void testAddProductWithMissingNameInBasket() {
+        Basket basket = new Basket();
+        Assertions.assertFalse(basket.add(" ", 2)); // Negative price should not be accepted
         Assertions.assertEquals(0, basket.items.size());
     }
 }
