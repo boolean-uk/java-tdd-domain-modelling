@@ -10,15 +10,8 @@ public class Basket {
     }
 
     public boolean add(String product, int price) {
-//        if (this.items.containsKey(product)) {
-//            return false;
-//        }
-//        this.items.put(product,price);
-//        return true;
-        if (price < 0 || product.strip().length()==0) {
-            return false;
-        }
-        return this.items.putIfAbsent(product, price) == null;
+        return price >= 0 && product.strip().length() != 0
+                && this.items.putIfAbsent(product, price) == null;
     }
 
     public int total() {
