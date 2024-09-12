@@ -16,10 +16,16 @@ As a developer, it's our job to extract the useful information into a functional
 
 Here is how one might design a domain model for the above user story:
 
-| Classes         | Methods                                     | Scenario               | Outputs |
-|-----------------|---------------------------------------------|------------------------|---------|
-| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | true    |
-|                 |                                             | If name is not in list | false   |
+| Classes         | Methods                                       | Scenario               | Outputs |
+|-----------------|-----------------------------------------------|------------------------|---------|
+| `CohortManager` | `search(List<String> cohorts, String name)`   | If name is in list     | true    |
+|                 |                                               | If name is not in list | false   |
+| ` Cohort`       | ` search(List<String> cohorts, String name) ` | If name is in list     | true    |
+|                 |                                               | If name is not in      | false   |
+|                 |                                               |                        |         |
+|                 |                                               |                        |         |
+
+
 
 > **Time to analyse**
 >
@@ -36,6 +42,12 @@ As a supermarket shopper,
 So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
+
+| Classes      | Methods                                 | Scenario                 | Outputs     |
+|--------------|-----------------------------------------|--------------------------|-------------|
+| ` Products ` | add(List<String> products, String name) | if its *not in* the list | true        |
+|              |                                         | if its *in* the list     | false       |
+| ` Basket`    | Calculate total(List<String> Products ) | Sum of the price         | Total price |
 
 ```
 As an organised individual,
