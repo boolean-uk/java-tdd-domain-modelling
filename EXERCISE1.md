@@ -16,10 +16,14 @@ As a developer, it's our job to extract the useful information into a functional
 
 Here is how one might design a domain model for the above user story:
 
-| Classes         | Methods                                     | Scenario               | Outputs |
-|-----------------|---------------------------------------------|------------------------|---------|
-| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | true    |
-|                 |                                             | If name is not in list | false   |
+| Classes         | Attributes                | Methods                        | Scenario               | Outputs           |
+|-----------------|---------------------------|--------------------------------|------------------------|-------------------|
+| `CohortManager` | `cohorts: List<Cohort>`   |                                |                        |                   |
+|                 |                           | `search(String name): Cohort`  | If name is in list     | Cohort Object     |
+|                 |                           |                                | If name is not in list | null OR Exception |
+| `Cohort`        | `name: String`            |                                |                        |                   |
+|                 | `students: List<Student>` |                                |                        |                   |
+| `Student`       |                           |                                |                        |                   |
 
 > **Time to analyse**
 >
@@ -37,12 +41,32 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+
+| Classes         | Methods                  | Scenario                                                    | Outputs                                   |
+|-----------------|--------------------------|-------------------------------------------------------------|-------------------------------------------|
+| `BasketManager` | `printTotalCost(): void` | A: user wants to know the total cost of items in his basket | void (Print total)                        |
+|                 |                          | B: no items in the basket                                   | void (Print empty basket message)         |
+| `Basket`        | `getTotalCost(): Number` | A                                                           | the total cost of all items in the basket |
+|                 |                          | B                                                           | returns null or 0                         |
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
 I'd like to see an itemised receipt that includes the name and price of the products
 I bought as well as the quantity, and a total cost of my basket.
 ```
+
+| Classes          | Attributes                         | Methods                      | Scenario                                    | Outputs                   |
+|------------------|------------------------------------|------------------------------|---------------------------------------------|---------------------------|
+| `Basket`         | `products: Map <Product, Integer>` |                              |                                             |                           |
+|                  | `totalCost: BigDecimal`            |                              |                                             |                           |
+| `BasketManager`  |                                    | `getReceipt(): void`         | User asks for receipt                       | Print Receipt             |
+|                  |                                    |                              | If no items in basket                       | Print Appropriate Message |
+|                  |                                    | `calculateTotalCost(): void` | Everytime we need to print cost             | -                         |
+|                  |                                    | `toString(): String`         | could use instead of getReceipt or together |                           |
+| `Product`        | `name: String`                     |                              |                                             |                           |
+|                  | `cost: BigDecimal`                 |                              |                                             |                           |
+
 
 - Add your domain models to this repository as a file named `domain-model`. This should either be a `.md` file like this one, or a screenshot / picture of your work.
 - Your model doesn't have to look like the example provided in this file. If you feel like you need more or less columns, feel free to go with that. There is no "right way" to do this kind of thing, we're just designing a system to make our lives easier when it comes to the coding part.
