@@ -1,6 +1,7 @@
 # 1. Extract domain models from user stories
 
 ### Warm up
+Michał Klukowski, Rafał Halama
 
 A **User Story** describes one thing a program is expected to do, from the perspective of somebody using that program. When planning a program, the client's requirements will be decomposed into many User Stories. Much of a developer's life is spent translating User Stories into a functional system. These systems are made up of different components, and each component is made up of units. We call these systems **Domain Models**.
 
@@ -37,6 +38,13 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+| Classes | Methods              | Fields                 | Scenario       | Outputs          |
+|---------|----------------------|------------------------|----------------|------------------|
+| Basket  | calculateTotalCost() | List<Product> products | List empty     | 0                |
+|         |                      |                        | List not empty | cost of products |
+| Product |                      | Double cost            |                |                  |
+|         |                      |                        |                |                  |
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
@@ -46,3 +54,20 @@ I bought as well as the quantity, and a total cost of my basket.
 
 - Add your domain models to this repository as a file named `domain-model`. This should either be a `.md` file like this one, or a screenshot / picture of your work.
 - Your model doesn't have to look like the example provided in this file. If you feel like you need more or less columns, feel free to go with that. There is no "right way" to do this kind of thing, we're just designing a system to make our lives easier when it comes to the coding part.
+
+| Classes | Methods                  | Fields                                                                  | Scenario                       | Outputs                                                                                       |
+|---------|--------------------------|-------------------------------------------------------------------------|--------------------------------|-----------------------------------------------------------------------------------------------|
+| Basket  | calculateTotalCost()     | Map<Product, Integer> products                                          | Map empty                      | 0                                                                                             |
+|         |                          |                                                                         | Map not empty                  | cost of products                                                                              |
+|         | calculateQuantity()      | Map<Product, Integer> products                                          | Map empty                      | 0                                                                                             |
+|         |                          |                                                                         | Map not empty                  | quantity of products                                                                          |
+|         | getReceipt()             | Map<Product, Integer> products                                          | User asks for a receipt        | new Receipt(products, calculateTotalCost(), calculateQuantity(), person)                      |
+|         |                          | Person person                                                           |                                |                                                                                               |
+| Product |                          | String name                                                             |                                |                                                                                               |
+|         |                          | Double cost                                                             |                                |                                                                                               |
+| Receipt | toString()               | Map<,> products, Double totalCost, Integer totalQuantity, Person person |                                | Shows the content of the receipt, total quantity and cost of products, and the name ofa buyer |
+| Person  | evaluateShoppingHabits() | List<Receipt> receipts                                                  | User wants to see his receipts | Shows the full list of receipts in a nice, readable way                                       |
+|         |                          | String name                                                             |                                |                                                                                               |
+
+
+Michał Klukowski, Rafał Halama
