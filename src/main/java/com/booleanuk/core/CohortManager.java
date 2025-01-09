@@ -1,5 +1,9 @@
 package com.booleanuk.core;
 
-public class CohortManager {
+import java.util.ArrayList;
 
+public class CohortManager {
+    public boolean search(ArrayList<String> cohorts, String name) {
+        return cohorts.contains(name);
+    }
 }
